@@ -27,4 +27,8 @@ router.get('/', function(req, res) {
   });
 })
 
+router.get('/setWebhook', function(req, res) {
+  bot.setWebhook('bot.rufusmbugua.com','')
+});
+
 module.exports = router;
