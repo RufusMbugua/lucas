@@ -1,0 +1,7 @@
+lucas:
+  image: bitnami/node
+  command: npm start
+  ports:
+    - 40090:3000
+  volumes:
+    - .:/app

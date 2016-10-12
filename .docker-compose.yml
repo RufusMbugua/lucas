@@ -1,8 +1,0 @@
-lucas:
-  image: bitami/node:latest
-  name: lucas
-  ports:
-    - 30090:3000
-  command:  bash -c "npm install"
-  volumes:
-    - /var/www/lucas:/app

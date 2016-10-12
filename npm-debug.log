@@ -7,7 +7,7 @@
 6 silly lifecycle lucas@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle lucas@1.0.0~start: lucas@1.0.0
 8 verbose lifecycle lucas@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle lucas@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/private/var/www/arifu/lucas/node_modules/.bin:/usr/local/bin:/usr/local/Cellar/php55/5.5.38_10/bin:/usr/local/sbin:/usr/local/Cellar/php56/5.6.26_2/sbin:/usr/local/Cellar/php56/5.6.26_2/bin:/usr/local/Cellar/php55/5.5.38_10/bin:/Users/rufusmbugua/yes/google-cloud-sdk/bin:/usr/local/php5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Users/rufusmbugua/.rvm/bin:/usr/local/bin:/usr/local/opt/android-sdk:/usr/local/opt/android-sdk/tools:/usr/local/opt/android-sdk/platform-tools:/Users/rufusmbugua/.composer/vendor/bin
+9 verbose lifecycle lucas@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/private/var/www/arifu/lucas/node_modules/.bin:/usr/local/bin:/usr/local/Cellar/php55/5.5.38_11/bin:/usr/local/sbin:/usr/local/Cellar/php56/5.6.26_3/sbin:/usr/local/Cellar/php56/5.6.26_3/bin:/usr/local/Cellar/php55/5.5.38_11/bin:/Users/rufusmbugua/yes/google-cloud-sdk/bin:/usr/local/php5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Users/rufusmbugua/.rvm/bin:/usr/local/bin:/usr/local/opt/android-sdk:/usr/local/opt/android-sdk/tools:/usr/local/opt/android-sdk/platform-tools:/Users/rufusmbugua/.composer/vendor/bin
 10 verbose lifecycle lucas@1.0.0~start: CWD: /private/var/www/arifu/lucas
 11 silly lifecycle lucas@1.0.0~start: Args: [ '-c', 'node ./bin/www' ]
 12 silly lifecycle lucas@1.0.0~start: Returned: code: 1  signal: null
