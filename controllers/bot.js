@@ -51,7 +51,7 @@ bot.onText(/\/jedi/, function (msg, match) {
   }
 
   bot.editMessageReplyMarkup(options.replyMarkup);
-  bot.sendMessage(fromId,'Pick One',options);
+  bot.sendMessage(['chat_id':fromId,'text':'Pick One','reply_markup':options.replyMarkup]);
   });
 
   router.get('/', function(req, res) {
