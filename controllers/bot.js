@@ -24,7 +24,20 @@ bot.onText(/\/echo (.+)/, function (msg, match) {
 bot.on('message', function (msg) {
   var chatId = msg.chat.id;
   // photo can be: a file path, a stream or a Telegram file_id
-  var message = "Wsup. I'm Lucas";
+  switch(msg.text){
+    case 'Hi':
+      message = "Wsup. I'm Lucas";
+    break;
+
+    case 'Bye':
+      message = "May the force be with you.";
+    break;
+
+    default:
+      message = 'Nice hearing from you, padawan.';
+    break;
+
+  }
   bot.sendMessage(chatId, message);
 });
 
