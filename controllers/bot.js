@@ -43,15 +43,7 @@ bot.on('message', function (msg) {
 bot.onText(/\/jedi (.+)/, function (msg, match) {
   var fromId = msg.from.id;
   var keyboard = [
-    {
-      text: 'Luke Skywalker',
-    },
-    {
-      text: 'Anakin Skywalker',
-    },
-    {
-      text: 'Darth Vader',
-    }
+    ['Luke Skywalker','Anakin Skywalker','Darth Vader']
   ];
   var replyMarkup = {
     keyboard: keyboard
