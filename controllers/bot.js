@@ -40,7 +40,7 @@ bot.on('message', function (msg) {
   bot.sendMessage(chatId, message);
 });
 
-bot.onText(/\/jedi (.+)/, function (msg, match) {
+bot.onText(/\/jedi/, function (msg, match) {
   var fromId = msg.from.id;
   var resp = match[1];
   var keyboard = [
@@ -59,8 +59,11 @@ bot.onText(/\/jedi (.+)/, function (msg, match) {
   }
   bot.editMessageReplyMarkup(replyMarkup);
   bot.sendMessage(
-    {'chat_id' : fromId,
-    'reply_markup' : replyMarkup});
+    {
+    chat_id:fromId,
+    text: 'Pick One',
+    reply_markup : replyMarkup
+    });
   });
 
   router.get('/', function(req, res) {
