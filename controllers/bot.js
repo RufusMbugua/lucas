@@ -45,16 +45,13 @@ bot.onText(/\/jedi (.+)/, function (msg, match) {
   var keyboard = [
     ['Luke Skywalker','Anakin Skywalker','Darth Vader']
   ];
-  var replyMarkup = {
+  var options = {};
+  options.replyMarkup = {
     keyboard: keyboard
   }
+
   bot.editMessageReplyMarkup(replyMarkup);
-  bot.sendMessage(
-    {
-    chat_id:fromId,
-    text: 'Pick One',
-    reply_markup : replyMarkup
-    });
+  bot.sendMessage(fromId,'Pick One',options);
   });
 
   router.get('/', function(req, res) {
