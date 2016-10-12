@@ -49,7 +49,7 @@ bot.on('message', function (msg) {
       message = 'Looking into my crystal ball.....';
     break;
 
-    case (str.match(/behind/) || {}).input:
+    case (msg.text.match(/behind/) || {}).input:
       message = "No, you're in the future!";
     break;
 
