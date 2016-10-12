@@ -33,26 +33,33 @@ bot.on('message', function (msg) {
     message = "May the force be with you.";
     break;
 
+    case 'May the force':
+    message = "*theme music*";
+    break;
+
     default:
-    message = 'Nice hearing from you, padawan.';
+    message = 'Processing....';
     break;
   }
   bot.sendMessage(chatId, message);
 });
 
-bot.onText(/\/jedi/, function (msg, match) {
-  var fromId = msg.from.id;
-  var keyboard = [
-    ['Luke Skywalker','Anakin Skywalker','Darth Vader']
-  ];
-  var options = {};
-  options.replyMarkup = {
-    message:'Selections',
-    keyboard: keyboard
-  }
+bot.onText(/\/jedi (.+)/, function (msg, match) {
+var chatId = msg.chat.id;
+  switch(match[1]){
+    case 'Best':
+    message = "Darth Vader";
+    break;
 
-  bot.editMessageReplyMarkup(options.replyMarkup);
-  bot.sendMessage(fromId,'Pick One');
+    case 'Worst':
+    message = "Anakin Skywalker.";
+    break;
+
+    default:
+    message = 'Pick a Jedi.';
+    break;
+  }
+  bot.sendMessage(chatId, message);
   });
 
   router.get('/', function(req, res) {
