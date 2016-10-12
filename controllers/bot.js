@@ -26,28 +26,50 @@ bot.on('message', function (msg) {
   // photo can be: a file path, a stream or a Telegram file_id
   switch(msg.text){
     case 'Hi':
-      message = "Wsup. I'm Lucas";
+    message = "Wsup. I'm Lucas";
     break;
 
     case 'Bye':
-      message = "May the force be with you.";
+    message = "May the force be with you.";
     break;
 
     default:
-      message = 'Nice hearing from you, padawan.';
+    message = 'Nice hearing from you, padawan.';
     break;
-
   }
   bot.sendMessage(chatId, message);
 });
 
-router.get('/', function(req, res) {
-  var query = req.query;
-  var message = query.message;
+bot.onText(/\/jedi (.+)/, function (msg, match) {
+  var fromId = msg.from.id;
+  var resp = match[1];
+  var keyboard = [
+    {
+      text: 'Luke Skywalker',
+    },
+    {
+      text: 'Anakin Skywalker',
+    },
+    {
+      text: 'Darth Vader',
+    }
+  ];
+  var replyMarkup = {
+    keyboard: keyboard
+  }
+  bot.editMessageReplyMarkup(replyMarkup);
+  bot.sendMessage(
+    {'chat_id' : fromId,
+    'reply_markup' : replyMarkup});
+  });
 
-  res.send(message);
-  // // Matches /echo [whatever]
+  router.get('/', function(req, res) {
+    var query = req.query;
+    var message = query.message;
 
-})
+    res.send(message);
+    // // Matches /echo [whatever]
 
-module.exports = router;
+  })
+
+  module.exports = router;
