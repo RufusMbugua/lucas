@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var TelegramBot = require('node-telegram-bot-api');
+var moment = require('moment');
 
 var token = '241964818:AAFNMMqV1_nRuvA0D_nqz3zB15o77pMZsKI';
 // Setup polling way
@@ -35,6 +36,17 @@ bot.on('message', function (msg) {
 
     case 'May the force':
     message = "*theme music*";
+    break;
+
+    case 'today':
+    case 'now':
+    case 'leo':
+      message = moment().format('LLLL');
+    break;
+
+    case 'tomorrow':
+    case 'kesho':
+      message = 'Looking into my crystal ball.....';
     break;
 
     default:
