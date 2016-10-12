@@ -40,7 +40,7 @@ bot.on('message', function (msg) {
   bot.sendMessage(chatId, message);
 });
 
-bot.onText(/\/jedi (.+)/, function (msg, match) {
+bot.onText(/\/jedi/, function (msg, match) {
   var fromId = msg.from.id;
   var keyboard = [
     ['Luke Skywalker','Anakin Skywalker','Darth Vader']
@@ -50,7 +50,7 @@ bot.onText(/\/jedi (.+)/, function (msg, match) {
     keyboard: keyboard
   }
 
-  bot.editMessageReplyMarkup(replyMarkup);
+  // bot.editMessageReplyMarkup(replyMarkup);
   bot.sendMessage(fromId,'Pick One',options);
   });
 
