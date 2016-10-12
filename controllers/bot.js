@@ -40,9 +40,8 @@ bot.on('message', function (msg) {
   bot.sendMessage(chatId, message);
 });
 
-bot.onText(/\/jedi/, function (msg, match) {
+bot.onText(/\/jedi (.+)/, function (msg, match) {
   var fromId = msg.from.id;
-  var resp = match[1];
   var keyboard = [
     {
       text: 'Luke Skywalker',
