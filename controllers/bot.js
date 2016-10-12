@@ -47,6 +47,7 @@ bot.onText(/\/jedi/, function (msg, match) {
   ];
   var options = {};
   options.replyMarkup = {
+    message:'Selections',
     keyboard: keyboard
   }
 
