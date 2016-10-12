@@ -50,7 +50,7 @@ bot.onText(/\/jedi/, function (msg, match) {
     keyboard: keyboard
   }
 
-  // bot.editMessageReplyMarkup(replyMarkup);
+  bot.editMessageReplyMarkup(options.replyMarkup);
   bot.sendMessage(fromId,'Pick One',options);
   });
 
