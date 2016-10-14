@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-require('use-strict');
+// require('use-strict');
 require('dotenv').config();
 
 var debug = require('debug')('express-example');
