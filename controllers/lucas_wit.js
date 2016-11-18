@@ -2,13 +2,15 @@
 
 const {Wit, log, interactive} = require('node-wit');
 
+var express = require('express');
 var NodeGeocoder = require('node-geocoder');
+var router = express.Router();
 
 var options = {
   provider: 'mapquest',
   // Optional depending on the providers
   httpAdapter: 'https', // Default
-  apiKey: 'FxQQC265SutbcWuIUGx671Ppi8rofRHg', // for Mapquest, OpenCage, Google Premier
+  apiKey: process.env.MAPQUEST_TOKEN, // for Mapquest, OpenCage, Google Premier
   formatter: null         // 'gpx', 'string', ...
 };
 
@@ -17,10 +19,10 @@ var geocoder = NodeGeocoder(options);
 var WeatherMan = require('weather-man');
 var async = require('async');
 
-var wm = new WeatherMan('darksky','a3a55b2a0038f261f5f1d6f2f1bf0bb5');
+var wm = new WeatherMan('darksky',process.env.DARKSKY_TOKEN);
 
 
-const accessToken = 'VHN6PP5OLI4VJ4QTBWLUZ6EV3QLLUK5P';
+const accessToken = process.env.WIT_TOKEN;
 
 // Quickstart example
 // See https://wit.ai/ar7hur/quickstart
@@ -106,3 +108,4 @@ function getWeather(location,callback) {
        callback (err, result);
     }
 }
+  module.exports = router;

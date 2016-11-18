@@ -6,7 +6,11 @@ var bodyParser = require('body-parser');
 var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var assets = require('connect-assets');
 
-var bot = require('./controllers/bot');
+// List Bots
+var lucas_telegram = require('./controllers/lucas_telegram');
+var lucas_wit = require('./controllers/lucas_wit');
+var vader_slack = require('./controllers/vader_slack');
+
 var app = express();
 // view engine setup
 
@@ -27,7 +31,9 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/bot', bot);
+app.use('/lucas_telegram', lucas_telegram);
+app.use('/lucas_wit', lucas_wit);
+app.use('/vader_slack', vader_slack);
 
 
 // catch 404 and forward to error handler

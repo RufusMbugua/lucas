@@ -28,6 +28,7 @@
     "node-telegram-bot-api": "^0.23.3",
     "node-uuid": "^1.4.7",
     "node-wit": "^4.1.0",
+    "slackbots": "^0.5.3",
     "strict-mode": "^1.0.0",
     "telegraf": "^3.2.1",
     "telegraf-wit": "^2.1.0",

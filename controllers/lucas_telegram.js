@@ -3,7 +3,7 @@ var router = express.Router();
 var TelegramBot = require('node-telegram-bot-api');
 var moment = require('moment');
 
-var token = '241964818:AAFNMMqV1_nRuvA0D_nqz3zB15o77pMZsKI';
+var token = process.env.TELEGRAM_BOT_TOKEN;
 // Setup polling way
 var bot = new TelegramBot(token, {
   polling: true,
@@ -13,7 +13,8 @@ var bot = new TelegramBot(token, {
     cert: './rufusmbugua.pem'
   }
 });
-bot.setWebHook('lucas.rufusmbugua.com/bot'+token, './rufusmbugua.pem');
+
+bot.setWebHook('bots.rufusmbugua.com/lucas_telegram'+token, './rufusmbugua.pem');
 
 bot.onText(/\/echo (.+)/, function (msg, match) {
   var fromId = msg.from.id;
