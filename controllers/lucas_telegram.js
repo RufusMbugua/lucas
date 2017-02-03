@@ -26,6 +26,7 @@ bot.onText(/\/echo (.+)/, function (msg, match) {
 bot.on('message', function (msg) {
   var chatId = msg.chat.id;
   // photo can be: a file path, a stream or a Telegram file_id
+  console.log(msg.text)
   switch(msg.text){
     case 'Hi':
     message = "Wsup. I'm Lucas";
@@ -59,8 +60,9 @@ bot.on('message', function (msg) {
       reply_to_message_id: msg.message_id,
       reply_markup: JSON.stringify({
         keyboard: [
-          ['Yes, you are the bot of my life ❤'],
-          ['No, sorry there is another one...']
+          [
+            { text:'Share your phone number',request_contact:true }
+          ],
         ]
       })
     };
