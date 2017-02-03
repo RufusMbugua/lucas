@@ -56,7 +56,8 @@ bot.on('message', function (msg) {
         message = "No, you're in the future!";
       break;
 
-      case 'keyboard':
+      case 'info':
+      case 'Info':
       const opts = {
         reply_to_message_id: msg.message_id,
         reply_markup: JSON.stringify({
