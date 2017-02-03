@@ -63,7 +63,7 @@ bot.on('message', function (msg) {
         reply_markup: JSON.stringify({
           keyboard: [
             [
-              { text:'Share your phone number',request_contact:true }
+              { text:'Please share your phone number so we can personalize your learning content.',request_contact:true }
             ],
           ]
         })
@@ -78,6 +78,7 @@ bot.on('message', function (msg) {
   }
   else if(msg.contact){
     console.log(msg.contact)
+    bot.sendMessage(msg.chat.id, 'We got your number...thanks.');
   }
   bot.sendMessage(chatId, message);
 });
