@@ -26,52 +26,57 @@ bot.onText(/\/echo (.+)/, function (msg, match) {
 bot.on('message', function (msg) {
   var chatId = msg.chat.id;
   // photo can be: a file path, a stream or a Telegram file_id
-  console.log(msg)
-  switch(msg.text){
-    case 'Hi':
-    message = "Wsup. I'm Lucas";
-    break;
 
-    case 'Bye':
-    message = "May the force be with you.";
-    break;
+  if(msg.text){
+    switch(msg.text){
+      case 'Hi':
+      message = "Wsup. I'm Lucas";
+      break;
 
-    case 'May the force':
-    message = "*theme music*";
-    break;
+      case 'Bye':
+      message = "May the force be with you.";
+      break;
 
-    case 'today':
-    case 'now':
-    case 'leo':
-      message = moment().format('LLLL');
-    break;
+      case 'May the force':
+      message = "*theme music*";
+      break;
 
-    case 'tomorrow':
-    case 'kesho':
-      message = 'Looking into my crystal ball.....';
-    break;
+      case 'today':
+      case 'now':
+      case 'leo':
+        message = moment().format('LLLL');
+      break;
 
-    case (msg.text.match(/behind/) || {}).input:
-      message = "No, you're in the future!";
-    break;
+      case 'tomorrow':
+      case 'kesho':
+        message = 'Looking into my crystal ball.....';
+      break;
 
-    case 'keyboard':
-    const opts = {
-      reply_to_message_id: msg.message_id,
-      reply_markup: JSON.stringify({
-        keyboard: [
-          [
-            { text:'Share your phone number',request_contact:true }
-          ],
-        ]
-      })
-    };
-    bot.sendMessage(msg.chat.id, 'We need some of your information', opts);
-    break;
+      case (msg.text.match(/behind/) || {}).input:
+        message = "No, you're in the future!";
+      break;
 
-    default:
-    message = 'Processing....';
-    break;
+      case 'keyboard':
+      const opts = {
+        reply_to_message_id: msg.message_id,
+        reply_markup: JSON.stringify({
+          keyboard: [
+            [
+              { text:'Share your phone number',request_contact:true }
+            ],
+          ]
+        })
+      };
+      bot.sendMessage(msg.chat.id, 'We need some of your information', opts);
+      break;
+
+      default:
+      message = 'Processing....';
+      break;
+    }
+  }
+  else if(msg.contact){
+    console.log(msg.contact)
   }
   bot.sendMessage(chatId, message);
 });
