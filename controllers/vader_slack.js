@@ -4,8 +4,8 @@ var router = express.Router();
 
 // create a bot
 var bot = new SlackBot({
-    token: process.env.SLACK_BOT_TOKEN, // Add a bot https://my.slack.com/services/new/bot and put the token
-    name: process.env.SLACK_BOT_NAME
+    token: process.env.SLACK_BOT_TOKEN_V, // Add a bot https://my.slack.com/services/new/bot and put the token
+    name: process.env.SLACK_BOT_NAME_V
 });
 
 bot.on('start', function() {
