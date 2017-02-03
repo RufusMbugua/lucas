@@ -14,6 +14,8 @@
   "dependencies": {
     "async": "^2.1.1",
     "body-parser": "^1.15.2",
+    "botkit": "^0.4.9",
+    "botmaster": "^2.2.3",
     "connect-assets": "^5.4.0",
     "cookie-parser": "^1.4.3",
     "dotenv": "^2.0.0",
