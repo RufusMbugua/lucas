@@ -26,7 +26,7 @@ bot.onText(/\/echo (.+)/, function (msg, match) {
 bot.on('message', function (msg) {
   var chatId = msg.chat.id;
   // photo can be: a file path, a stream or a Telegram file_id
-  console.log(msg.text)
+  console.log(msg)
   switch(msg.text){
     case 'Hi':
     message = "Wsup. I'm Lucas";
@@ -66,7 +66,7 @@ bot.on('message', function (msg) {
         ]
       })
     };
-    bot.sendMessage(msg.chat.id, 'Do you love me?', opts);
+    bot.sendMessage(msg.chat.id, 'We need some of your information', opts);
     break;
 
     default:
