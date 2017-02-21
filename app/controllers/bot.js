@@ -21,15 +21,6 @@ app.listen(3001, function() {});
 
 webuibot = bot.WebUIBot;
 
-bot.WebUIBot.on('update', (update) => {
-  response = processMessage(update,process.env.ARIFU_url)
-});
-
-
-bot.TelegramBot.setWebHook('arifubot.rufusmbugua.com',{
-  certificate:  './rufusmbugua.pem'
-});
-
 var message=null;
 
 // Telegram
@@ -37,7 +28,7 @@ bot.TelegramBot.on('message', function (msg) {
 
   var chatId = msg.chat.id;
   // photo can be: a file path, a stream or a Telegram file_id
-  processMessage(msg,process.env.ARIFU_url,'telegram').then(function(response){
+  processMessage(msg,process.env.API_url,'telegram').then(function(response){
 
     if(response){
         if(response.image_url){
@@ -62,7 +53,7 @@ bot.TelegramBot.on('message', function (msg) {
 
 // Twitter
 bot.TwitterBot.on('update', (update) => {
-  processMessage(msg,process.env.ARIFU_url,'twitter').then(function(response){
+  processMessage(msg,process.env.API_url,'twitter').then(function(response){
     if(response){
       bot.TwitterBot.reply(update, response.message);
     }
@@ -72,7 +63,7 @@ bot.TwitterBot.on('update', (update) => {
 bot.SlackBot.on('message', function(message) {
     // all ingoing events https://api.slack.com/rtm
     if(message.text && message.channel && message.user){
-      processMessage(message,process.env.ARIFU_url,'slack').then(function(response){
+      processMessage(message,process.env.API_url,'slack').then(function(response){
         if(response){
           bot.SlackBot.postMessage(message.channel,response.message);
         }
