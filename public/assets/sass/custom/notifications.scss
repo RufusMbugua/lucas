@@ -1,0 +1,64 @@
+//Messages
+.message{
+  padding:0;
+}
+.message.left{
+  border-left:5px solid $light-gray;
+  height:80%;
+  overflow-y:auto;
+  .title{
+    padding:10px;
+    text-align:center;
+    color:$madison !important;
+    background:none;
+  }
+}
+.message.item{
+  border-bottom:2px solid $light-gray;
+  padding:0;
+  .inner{
+    padding:10px;
+    .title{
+      background:none;
+      text-align:left;
+      padding:0;
+      margin-bottom:0.5em;
+      .subject{
+        @extend .typl8-delta;
+        margin:0;
+      }
+      .meta{
+        color:$light-gray;
+      }
+    }
+    .content{
+      @extend .typl8-epsilon;
+      margin:0 !important;
+      padding:0;
+    }
+  }
+}
+.message.view{
+  .inner{
+    .title{
+      padding:40px;
+      background:$ocean-green;
+      color:white;
+      .subject{
+        @extend .col-md-8;
+        color:white;
+        text-align:left;
+        @extend .typl8-gamma;
+      }
+      .meta{
+        @extend .col-md-4;
+        text-align:right;
+      }
+    }
+    .content{
+      @extend .typl8-epsilon;
+      margin:0 !important;
+      padding:5%;
+    }
+  }
+}

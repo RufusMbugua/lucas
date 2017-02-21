@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>20161006111510-county-table-seed.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="../docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>20161006111510-county-table-seed.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">up</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">queryInterface, Sequelize</span>) </span>{
+    <span class="hljs-keyword">return</span> queryInterface.bulkInsert(<span class="hljs-string">'Counties'</span>, [
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">1</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Nairobi'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">2</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Mombasa'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">3</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Kwale'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">4</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Kilifi'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">5</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Tana River'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">6</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Lamu'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">7</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Taita Taveta'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">8</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Garissa'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">9</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Wajir'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">10</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Mandera'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">11</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Marsabit'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">12</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Isiolo'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">13</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Meru'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">14</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Tharaka Nithi'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">15</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Embu'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">16</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Kitui'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">17</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Machakos'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">18</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Makueni'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">19</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Nyandarua'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">20</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Nyeri'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">21</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Kirinyaga'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">22</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Muranga'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">23</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Kiambu'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">24</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Turkana'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">25</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'West Pokot'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">26</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Samburu'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">27</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Trans Nzoia'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">28</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Uasin Gishu'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">29</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Elgeoyo Marakwet'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">30</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Nandi'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">31</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Baringo'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">32</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Laikipia'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">33</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Nakuru'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">34</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Narok'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">35</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Kajiado'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">36</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Kericho'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">37</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Bomet'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">38</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Kakamega'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">39</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Vihiga'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">40</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Bungoma'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">41</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Busia'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">42</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Siaya'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">43</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Kisumu'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">44</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Homa Bay'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">45</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Migori'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">46</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Kisii'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    {
+      <span class="hljs-attr">id</span> : <span class="hljs-number">47</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Nyamira'</span>,
+      <span class="hljs-attr">created_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+      <span class="hljs-attr">updated_at</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
+    },
+    
+    ], {});
+  },
+
+  <span class="hljs-attr">down</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">queryInterface, Sequelize</span>) </span>{
+    <span class="hljs-keyword">return</span> queryInterface.bulkDelete(<span class="hljs-string">'Counties'</span>, <span class="hljs-literal">null</span>, {});
+  }
+};</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

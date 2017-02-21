@@ -1,0 +1,191 @@
+@import variables
+
+// Helpers
+// These helpers are here for quick adjustments. Add small reusable classes here.
+
+// Text, Typography
+
+ul, ol
+  &.list
+    margin-left: 1em
+    padding-left: 1em
+
+ul.list li
+  list-style: disc
+
+ol.list li
+  list-style: decimal
+
+.align-left
+  text-align: left
+
+.align-right
+  text-align: right
+
+.break-word
+  word-break: break-all
+
+.no-wrap
+  white-space: nowrap
+
+.thin
+  font-weight: 100
+
+.uppercase
+  text-transform: uppercase
+
+// Lighten all typography for dark backgrounds
+
+.light-text
+  *, a
+    color: white
+  a
+    text-decoration: underline
+
+// Alignment
+
+.auto
+  margin: 0 auto
+
+.block
+  display: block
+
+.center
+  text-align: center
+
+.clear
+  clear: both
+
+.float-left
+  float: left
+
+.float-right
+  float: right
+
+.inline
+  display: inline
+
+.inline-block
+  display: inline-block
+
+// Forms
+
+.checkbox, .radio
+  display: block
+  line-height: 2.2
+
+// Styled Elements
+
+.box
+  border-radius: $radius
+  border: $border-width solid #ddd
+  margin: 1em 0
+  padding: 1em
+
+.disabled
+  color: $gray-light
+
+.radius
+  border-radius: $radius
+
+.round
+  border-radius: $round
+
+// Opacities
+
+.opacity-half
+  opacity: 0.5
+
+// Colors
+
+.gray
+  color: $gray
+
+.gray-medium
+  color: $gray-medium
+
+.gray-light
+  color: $gray-light
+
+.gray-lighter
+  color: $gray-lighter
+
+.gray-lightest
+  color: $gray-lightest
+
+// Backgrounds
+
+.bg
+  background: $gray-lightest
+
+// Backgrounds (Gradients)
+
+.bg-black
+  background: $bg-black-fallback
+  background: $bg-black
+
+.bg-gray
+  background: $bg-gray-fallback
+  background: $bg-gray
+
+.bg-blue
+  background: $bg-blue-fallback
+  background: $bg-blue
+
+.bg-red
+  background: $bg-red-fallback
+  background: $bg-red
+
+.bg-green
+  background: $bg-green-fallback
+  background: $bg-green
+
+// Hide / Show
+
+.hide
+  display: none
+
+.show
+  display: block
+
+// Widths
+
+.full
+  width: 100%
+
+// Manually inserting a space into an empty element
+
+.space
+  &:after
+    content: $non-breaking-space
+
+// Font sizing
+
+.i2x
+  font-size: 2em
+.i3x
+  font-size: 3em
+.i4x
+  font-size: 4em
+.i5x
+  font-size: 5em
+
+.same-width
+  text-align: center
+  width: 2em
+  display: inline-block
+
+@media screen and (max-width: $handheld)
+
+  // Hide these classes on the $handheld breakpoint
+
+  .space, .hide-on-mobile
+    display: none
+
+  .responsive
+    width: 100%
+
+@media screen and (max-width: $handheld-portrait)
+
+  .responsive-portrait
+    width: 100%

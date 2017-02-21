@@ -1,0 +1,22 @@
+.alert{
+  border-radius:0 !important;
+  border:none !important;
+  text-align: center;
+  font-family: Lato;
+  font-size:1.3em;
+  margin-bottom:0;
+}
+.alert-danger{
+  background: $flamingo;
+  color:white;
+}
+.alert-success{
+  background:$ocean-green;
+  color:white;
+}
+.instruction{
+  text-align:left;
+  font-size:1em;
+  @extend .alert-info;
+  @extend .alert;
+}

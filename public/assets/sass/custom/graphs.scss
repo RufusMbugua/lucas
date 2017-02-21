@@ -1,0 +1,21 @@
+.graph{
+  h3{
+    text-align:center;
+  }
+  h3.cm{
+    padding:10px;
+    margin:0;
+    color:white;
+    background:$picton-blue;
+  }
+  /* inner{
+  background:white;
+  } */
+
+}
+.large.graph{
+  @extend .col-md-12;
+  .inner{
+    height:50%;
+  }
+}

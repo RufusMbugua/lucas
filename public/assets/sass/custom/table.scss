@@ -1,0 +1,12 @@
+table{
+  background:white;
+  border:1px solid $silver;
+  .btn{
+    @extend .btn-sm;
+  }
+  tfoot{
+    th{
+      color:$light-gray;
+    }
+  }
+}

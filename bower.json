@@ -1,0 +1,88 @@
+{
+  "name": "unohana",
+  "version": "0.2.0",
+  "authors": [
+    "Rufus Mbugua <mbuguarufus@gmail.com>"
+  ],
+  "description": "Laravel + Angular JS",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "4.3.0",
+    "angular": "1.3.11",
+    "angular-bootstrap": "~0.13.0",
+    "angular-moment": "0.9.0",
+    "angular-smart-table": "1.4.9",
+    "angular-ui-router": "0.2.13",
+    "restangular": "1.4.0",
+    "semantic-ui": "1.8.1",
+    "textAngular": "1.3.3",
+    "webfont-opensans": "*",
+    "skrollr": "~0.6.29",
+    "skrollr-menu": "~1.0.1",
+    "angular-strap": "~2.2.0",
+    "angular-aside": "~1.1.3",
+    "headroom.js": "~0.7.0",
+    "highcharts-ng": "~0.0.8",
+    "highcharts": "~4.1.7",
+    "angular-mapbox": "~0.1.4",
+    "angular-leaflet-directive": "~0.8.5",
+    "leaflet.markercluster": "0.4.0-hotfix.1",
+    "Leaflet.awesome-markers": "~2.0.2",
+    "Leaflet.label": "~0.2.1",
+    "angular-slick": "~0.2.1",
+    "angular-wizard": "~0.5.5",
+    "octicons": "~3.3.0",
+    "angular-permission": "~1.1.1",
+    "angular-local-storage": "~0.2.3",
+    "animate.css": "~3.5.0",
+    "tg-angular-validator": "~1.2.8",
+    "pushy": "~0.9.2",
+    "ink": "~1.0.5",
+    "socket.io": "~1.4.5",
+    "angular-socket-io": "~0.7.0",
+    "angular-loading-bar": "~0.8.0",
+    "Ionicons": "ionicons#^2.0.1",
+    "angular-drag-and-drop-lists": "https://github.com/marceljuenemann/angular-drag-and-drop-lists",
+    "chart.js": "^2.2.2"
+  },
+  "resolutions": {
+    "angular": "1.3.11",
+    "angular-bootstrap": "~0.12.0"
+  },
+  "overrides": {
+    "normalizeMulti": [
+      {
+        "dependencies": [
+          "lato",
+          "ionicons",
+          "font-awesome",
+          "octicons",
+          "slick",
+          "angular-leaflet-directive"
+        ],
+        "normalize": {
+          "images": [
+            "*.jpeg",
+            "*.png",
+            "*.jpg"
+          ],
+          "fonts": [
+            "*.ttf",
+            "*.woff2",
+            "*.svg",
+            "*.eot",
+            "*.otf"
+          ]
+        }
+      }
+    ]
+  }
+}

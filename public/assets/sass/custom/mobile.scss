@@ -1,0 +1,64 @@
+
+
+// Media Queries
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+@media (max-width: $screen-xs-max) {
+  form{
+    .btn{
+      width:100%;
+      font-size:1.4em;
+    }
+  }
+  .padded-extra,.padded-alot{
+    padding:2% 5% !important;
+  }
+  .btn{
+    width:80%;
+    clear:both;
+    margin:10px auto;
+  }
+  footer{
+    text-align: center;
+    div{
+      margin-bottom:10px;
+    }
+  }
+  nav#main{
+    .navbar-collapse{
+      border-bottom: 1px solid #ddd;
+    }
+    li{
+      a{
+        text-align: center;
+        font-size:1.4em;
+      }
+    }
+  }
+// Side Menu
+nav#account{
+  .navbar-brand{
+    border:none;
+    width:100% !important;
+    img{
+      width:40%;
+    }
+    .btn{
+      width:10% !important;
+      clear:none !important;
+      margin:0 !important;
+    }
+  }
+}
+
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+
+}
+@media (min-width: $screen-lg-min) {
+
+}

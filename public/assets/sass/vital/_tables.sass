@@ -1,0 +1,40 @@
+@import variables
+
+// Tables
+
+table
+  width: 100%
+  margin: 1em 0
+  border-spacing: 0
+  border-collapse: separate
+th
+  font-weight: 400
+  color: #000
+  text-align: left
+td
+  border-top: $border-width solid $gray-lighter
+
+td, th
+  padding: 0.5em
+  text-align: left
+  vertical-align: top
+tfoot
+  tr
+    border-bottom: 0
+
+@media screen and (max-width: $handheld)
+
+  tr, td, th
+    display: block
+  tr
+    padding: 1em 0
+    border-top: 1px solid $gray-lighter
+    &:first-child
+      border-top: 0
+  thead
+    display: none
+  td
+    clear: both
+    border: none
+  td, th
+    padding: 0.25em 0

@@ -1,0 +1,90 @@
+$typl8-scale: (
+        typl8-tera: 117,
+        typl8-giga: 90,
+        typl8-mega: 72,
+        typl8-alpha: 60,
+        typl8-beta: 42,
+        typl8-gamma: 26,
+        typl8-delta: 21,
+        typl8-epsilon: 18,
+        typl8-zeta: 14,
+) !default;
+
+@import "../typeplate/styles";
+
+body{
+  font-family: Lato;
+  font-family:Lato;
+  @extend .typl8-zeta;
+}
+.title{
+  color:$sage;
+  text-shadow:0 0.25px $ash-grey;
+}
+.title,.header{
+  border-bottom:1px solid #333;
+  line-height:37px;
+  text-align:center;
+  padding:10px 15px;
+  margin-bottom:0 !important;
+}
+.green{
+  color:$ocean-green;
+}
+.red{
+  color:$flamingo;
+}
+.orange{
+  color:#EB9532;
+}
+.seller{
+  color:$ocean-green;
+  i{
+    color:$ocean-green;
+  }
+}
+.buyer{
+  color:$flamingo;
+  i{
+    color:$flamingo;
+  }
+}
+.broker{
+  color:$madison;
+  i{
+    color:$madison;
+  }
+}
+
+.subtitle{
+  padding-bottom:0.5em;
+  border-bottom:1px solid $light-gray;
+}
+.label{
+  line-height:2;
+}
+.center{
+  text-align: center;
+}
+p{
+  margin-bottom: 3em;
+}
+p+p{
+ text-indent:0;
+}
+
+h1,h2,h3,h4,h5,h6{
+  i{
+    padding-right:5px;
+  }
+}
+
+.time{
+  font-size:0.7em;
+  float:right;
+  color:$light-gray;
+  cursor: pointer;
+  &:hover{
+    color:black;
+  }
+}

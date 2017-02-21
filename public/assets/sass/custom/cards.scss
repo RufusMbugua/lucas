@@ -1,0 +1,93 @@
+
+/* Cards */
+@mixin card($height){
+  padding:5%;
+  background:white;
+  width:100% !important;
+  min-height:$height !important;
+  border:1px solid $silver;
+  margin-bottom:2em;
+  position: relative;
+  .header{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    .card-meta{
+      color:$gray;
+    }
+    i{
+      padding-right:10px;
+    }
+  }
+  .title{
+    border-bottom:1px solid #ddd;
+  }
+  .content{
+    padding-top:0;
+    padding:0.5em;
+    border-top:none;
+  }
+  .value{
+    @extend .typl8-beta;
+    color:$dark-gray;
+    text-align:center;
+  }
+  button{
+    width:60%;
+    margin:auto;
+    text-align:center;
+    margin-bottom:10px;
+  }
+}
+.card-sm{
+  @include card(120px);
+}
+a:hover{
+  text-decoration: none;
+  .inner{
+    border:1px solid $madison;
+  }
+
+}
+.card-md{
+  @include card(300px);
+}
+.card-lg{
+  @extend .col-md-12;
+  @include card(500px);
+}
+.cards{
+  padding-top:0 !important;
+  .column{
+    padding-top:0 !important;
+  }
+  .cards{
+    padding:0 !important;
+  }
+}
+
+.dashboard{
+  height:120px;
+  &.buttons{
+    .btn{
+      width:50%;
+      height:50%;
+      margin-bottom:0px;
+      i{
+        float:right;
+        font-size:2em;
+      }
+      div{
+        margin-top:10px;
+        display: inline-block;
+      }
+    }
+    .btn:nth-child(even){
+      float:right;
+      i{
+        float:left;
+      }
+    }
+  }
+}
