@@ -3,7 +3,7 @@ const _ = require('lodash');
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
-const BaseBot = require('botmaster').botTypes.BaseBot
+// const BaseBot = require('botmaster').botTypes.BaseBot
 
 
 class WebUIBot extends BaseBot {

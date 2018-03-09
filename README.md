@@ -1,4 +1,4 @@
-# Arifu NodeJS API/BOT
+# Lucas NodeJS API/BOT
 
 ## Brief
 The BOT is built on web frameworks. These include:
