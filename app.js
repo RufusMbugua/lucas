@@ -36,8 +36,8 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', bot);
-
+app.use('/', index);
+app.use('/bot', bot);
 
 
 // catch 404 and forward to error handler
