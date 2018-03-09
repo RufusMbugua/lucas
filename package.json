@@ -9,7 +9,7 @@
     "test-integration": "mocha test/integration/*.test.js"
   },
   "dependencies": {
-    "async": "^2.1.4",
+    "async": "^2.6.0",
     "body-parser": "~1.13.2",
     "bootbot": "^1.0.14",
     "botkit": "^0.6.11",
@@ -28,18 +28,18 @@
     "gulp-order": "^1.1.1",
     "gulp-refresh": "^1.1.0",
     "jade": "~1.11.0",
-    "jsonwebtoken": "^7.1.7",
+    "jsonwebtoken": "^7.4.3",
     "laravel-elixir": "^6.0.0-10",
     "main-bower-files": "^2.13.1",
     "morgan": "~1.6.1",
     "mysql": "^2.10.0",
     "node-telegram-bot-api": "^0.26.0",
-    "promise": "^7.1.1",
-    "request": "^2.79.0",
+    "promise": "^7.3.1",
+    "request": "^2.83.0",
     "sequelize": "^3.3.2",
     "sequelize-cli": "^1.9.2",
     "serve-favicon": "~2.3.0",
-    "slackbots": "^1.0.2",
+    "slackbots": "^1.1.0",
     "sqlite3": "^3.0.8"
   },
   "devDependencies": {
