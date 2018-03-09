@@ -1,12 +1,12 @@
 'use strict';
 // Core Bot Framework
 // Load Modules
-const botkit = require('botkit');
-const Botmaster = require('botmaster');
+// const botkit = require('botkit');
+// const Botmaster = require('botmaster');
 const express = require('express');
 const WebUIBot = require('./bots/web');
-const SlackBOT = require('slackbots');
-const TelegramBot = require('node-telegram-bot-api');
+// const SlackBOT = require('slackbots');
+// const TelegramBot = require('node-telegram-bot-api');
 const BootBot = require('bootbot');
 
 // // Set Twitter Variables
