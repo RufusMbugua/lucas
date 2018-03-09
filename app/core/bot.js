@@ -47,7 +47,7 @@ const facebookSettings = {
 
 // Create Core Bot Object
 const bot = {
-    Messenger: new BootBot(facebookSettings)
+    // Messenger: new BootBot(facebookSettings)
   // WebUIBot: new WebUIBot(webSettings),
   // TwitterBot: new Botmaster.botTypes.TwitterBot(twitterSettings),
   // SlackBot: new SlackBOT(slackSettings),
