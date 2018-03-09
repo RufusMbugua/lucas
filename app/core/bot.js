@@ -4,7 +4,6 @@
 // const botkit = require('botkit');
 // const Botmaster = require('botmaster');
 const express = require('express');
-const WebUIBot = require('./bots/web');
 // const SlackBOT = require('slackbots');
 // const TelegramBot = require('node-telegram-bot-api');
 const BootBot = require('bootbot');
