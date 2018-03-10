@@ -9,6 +9,7 @@
     "test-integration": "mocha test/integration/*.test.js"
   },
   "dependencies": {
+    "asap": "^2.0.6",
     "async": "^2.6.0",
     "body-parser": "~1.13.2",
     "bootbot": "^1.0.14",
