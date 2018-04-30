@@ -23,6 +23,6 @@ const bot = {
 }
 
 // bot.telegraf.use(Telegraf.memorySession())
-
+// bot.telegraf.use(bot.wit.middleware())
 
 module.exports = bot

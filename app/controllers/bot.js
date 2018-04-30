@@ -7,6 +7,14 @@ const DarkSky = require('dark-sky')
 const darksky = new DarkSky(process.env.DARKSKY_TOKEN) // Your API KEY can be hardcoded, but I recommend setting it as an env variable
 var _ = require('lodash')
 const moment = require('moment')
+const GoogleMapsAPI = require('googlemaps')
+const async = require('async')
+var publicConfig = {
+  key: process.env.GOOGLE_MAPS_API,
+  stagger_time: 1000, // for elevationPath
+  encode_polylines: false,
+};
+const gmAPI = new GoogleMapsAPI(publicConfig);
 
 const firstEntityValue = (entities, entity) => {
   const val = entities && entities[entity] && Array.isArray(entities[entity]) && entities[entity].length > 0 && entities[entity][0].value
@@ -28,9 +36,31 @@ bot.telegraf.on('message', (ctx) => {
           if (err) {
             console.log(err)
           } else {
-            darksky.coordinates(location.latLng).units('ca').language('en').exclude('minutely,daily,hourly').get().then(function (body) {
-              return ctx.replyWithHTML(cleanArray(body.currently))
-            }).catch(console.log)
+            // console.log(location.latLng);return;
+            async.series([
+              function (callback) {
+                var params = {
+                  center: location.latLng.lat + ',' + location.latLng.lng,
+                  zoom: 11,
+                  size: '500x500',
+                  maptype: 'roadmap',
+                  style: [{
+                    feature: 'road',
+                    element: 'all',
+                    rules: {
+                      hue: '0x00ff00'
+                    }
+                  }]
+                }
+                ctx.replyWithPhoto(gmAPI.staticMap(params))
+                callback(null, 1)
+              },
+              function (callback) {
+                darksky.coordinates(location.latLng).units('ca').language('en').exclude('minutely,daily,hourly').get().then(function (body) {
+                  ctx.replyWithHTML(cleanArray(body.currently))
+                }).catch(console.log)
+              }
+            ])
           }
         })
       } else {}
@@ -38,15 +68,14 @@ bot.telegraf.on('message', (ctx) => {
 })
 
 const cleanArray = (results) => {
- var message = "<b>Your comprehensive weather report</b> \n\n" 
+  var message = "<b>Your comprehensive weather report</b> \n\n"
   _.forEach(results, function (value, key) {
-  	if(key=='time'){
- message += '<b>' + emojify(_.startCase(key)) + '</b> : ' + moment.unix(value).format("HH:mm") + "\n"
-  	}
-  	else{
-  	 message += '<b>' + emojify(_.startCase(key)) + '</b> : ' + value + "\n"
-  	}
-   
+    if (key == 'time') {
+      message += '<b>' + emojify(_.startCase(key)) + '</b> : ' + moment.unix(value).format("HH:mm") + "\n"
+    } else {
+      message += '<b>' + emojify(_.startCase(key)) + '</b> : ' + value + "\n"
+    }
+
   })
   return message;
 }
@@ -59,8 +88,8 @@ const emojify = (text) => {
     emoji = '🌡️'
     break
 
-   case 'Time':
-   emoji = '🕰️'
+  case 'Time':
+    emoji = '🕰️'
 
   default:
     emoji = ''
