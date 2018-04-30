@@ -9,6 +9,9 @@ var _ = require('lodash')
 const moment = require('moment')
 const GoogleMapsAPI = require('googlemaps')
 const async = require('async')
+
+var giphy = require('giphy-api')(process.env.GIPHY);
+
 var publicConfig = {
   key: process.env.GOOGLE_MAPS_API,
   stagger_time: 1000, // for elevationPath
@@ -23,6 +26,26 @@ const firstEntityValue = (entities, entity) => {
   }
   return typeof val === 'object' ? val.value : val
 }
+
+bot.telegraf.hears('gif', (ctx) => {
+	
+  giphy.random({
+  	tag: 'avengers infinity war',
+    limit: 1,
+    rating: 'g',
+    fmt: 'json'
+  }, function (err, res) {
+  	if(err){
+  		console.log(err)
+  	}
+  	else{
+  		ctx.replyWithPhoto(res.data.url)
+  	}
+    
+
+  });
+})
+
 
 bot.telegraf.on('message', (ctx) => {
   return bot.wit.meaning(ctx.message.text)
@@ -98,5 +121,7 @@ const emojify = (text) => {
 
   return emoji + ' ' + text
 }
+
+
 
 bot.telegraf.startPolling()
