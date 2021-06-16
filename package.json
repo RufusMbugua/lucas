@@ -48,7 +48,7 @@
         "osm-static-maps": "^3.9.0",
         "promise": "^7.3.1",
         "request": "^2.83.0",
-        "sequelize": "^3.3.2",
+        "sequelize": "^5.15.1",
         "sequelize-cli": "^1.9.2",
         "serve-favicon": "~2.3.0",
         "slackbots": "^1.1.0",
