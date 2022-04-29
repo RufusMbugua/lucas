@@ -10,7 +10,7 @@
     },
     "dependencies": {
         "asap": "^2.0.6",
-        "async": "^2.6.0",
+        "async": "^2.6.4",
         "body-parser": "~1.13.2",
         "bootbot": "^1.0.14",
         "botkit": "^0.6.11",
