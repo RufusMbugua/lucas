@@ -22,7 +22,7 @@
         "debug": "~2.2.0",
         "docco-husky": "^0.3.3",
         "dotenv": "^5.0.1",
-        "express": "~4.13.1",
+        "express": "~4.17.3",
         "giphy-api": "^1.2.7",
         "google-maps-image-api": "^1.0.3",
         "google-maps-image-api-url": "^1.0.3",
