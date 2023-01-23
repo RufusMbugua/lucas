@@ -64,6 +64,6 @@
         "gulp-sass": "^2.3.2",
         "jasmine": "^2.5.1",
         "mocha": "^2.2.5",
-        "supertest": "^1.0.1"
+        "supertest": "^6.3.3"
     }
 }
